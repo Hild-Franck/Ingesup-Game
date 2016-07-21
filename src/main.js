@@ -47,20 +47,20 @@ function update(){
     {
         if (cursors.left.isDown)
         {
-            card.x -= 4;
+            game.camera.x -= 4;
         }
         else if (cursors.right.isDown)
         {
-            card.x += 4;
+            game.camera.x += 4;
         }
 
         if (cursors.up.isDown)
         {
-            card.y -= 4;
+            game.camera.y -= 4;
         }
         else if (cursors.down.isDown)
         {
-            card.y += 4;
+            game.camera.y += 4;
         }
     }
 }
