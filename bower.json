@@ -1,0 +1,27 @@
+{
+  "name": "ingesup-game",
+  "description": "A mini-game design by a whole class",
+  "main": "index.js",
+  "authors": [
+    "Hild Franck"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "game",
+    "class",
+    "simulation",
+    "school"
+  ],
+  "homepage": "https://github.com/Hild-Franck/Ingesup-Game",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "phaser": "^2.6.1"
+  }
+}

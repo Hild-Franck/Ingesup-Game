@@ -1,0 +1,31 @@
+{
+  "name": "ingesup-game",
+  "version": "0.0.0",
+  "description": "A mini-game design by a whole class",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "bower install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm install",
+    "start": "./node_modules/.bin/lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hild-Franck/Ingesup-Game.git"
+  },
+  "keywords": [
+    "game",
+    "class",
+    "simulation",
+    "school"
+  ],
+  "author": "Hild Franck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hild-Franck/Ingesup-Game/issues"
+  },
+  "homepage": "https://github.com/Hild-Franck/Ingesup-Game#readme",
+  "devDependencies": {
+    "lite-server": "^2.2.2"
+  }
+}
