@@ -3,10 +3,11 @@ module.exports = function(grunt){
         pkg: grunt.file.readJSON('package.json'),
         watch: {
             js: {
-                files: ['app/src/*.js', "tests/*js", 'app/src/**/*.js'],
+                files: ['src/*.js', 'src/**/*.js'],
                 tasks:['browserify'],
                 options: {
-                    atBegin: true
+                    atBegin: true,
+                    livrereload: true
                 }
             }
         },
@@ -29,7 +30,7 @@ module.exports = function(grunt){
                 options: {
                     port: 8000,
                     hostname: 'localhost',
-                    base: './public',
+                    base: '',
                     keepalive: true
                 }
             }
