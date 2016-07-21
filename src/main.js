@@ -1,0 +1,1 @@
+const test = param => console.log(param)
