@@ -18,4 +18,4 @@ const gameCreate = game => {
     game.state.update = () => gameUpdate({ cursors, moving })(game)
 }
 
-module.exports = { gameCreate }
+module.exports = gameCreate

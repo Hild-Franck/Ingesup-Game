@@ -1,5 +1,4 @@
 const gamePreload = require('./load')
-const { gameCreate, gameUpdate } = require('./create')
-let map, layer, cursors, moving = 0
+const gameCreate = require('./create')
 
 module.exports = { gamePreload, gameCreate }
