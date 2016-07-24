@@ -1,4 +1,5 @@
-const gameUpdate = ({ cursors, moving }) =>
+const zoom = require('../zoom')
+const gameUpdate = ({ cursors, moving, zoomRatio, stageGroup, layer }) =>
     game => {
     	const camSpeed = 10
         const camera = game.camera
@@ -24,6 +25,7 @@ const gameUpdate = ({ cursors, moving }) =>
             else if (cursors.down.isDown)
                 camera.y += camSpeed
         }
+        zoom(zoomRatio, stageGroup, layer)
     }
 
 module.exports = gameUpdate
