@@ -4,7 +4,7 @@ module.exports = function(grunt){
         watch: {
             js: {
                 files: ['src/*.js', 'src/**/*.js'],
-                tasks:['browserify'],
+                tasks:['browserify:dev'],
                 options: {
                     atBegin: true,
                     livrereload: true
@@ -12,12 +12,27 @@ module.exports = function(grunt){
             }
         },
         browserify: {
+            dev: {
                 options: {
                     transform: [
                         ["babelify", {presets: ["es2015"], plugins: ["transform-strict-mode"]}]
                     ]
                 },
-                'dist/game.js': ['src/**/*.js']
+                files: {
+                    'dist/game.js': ['src/**/*.js']
+                }
+            },
+            prod: {
+                options: {
+                    transform: [
+                        ["babelify", {presets: ["es2015"], plugins: ["transform-strict-mode"]}],
+                        ["uglifyify"]
+                    ]
+                },
+                files: {
+                    'dist/game.js': ['src/**/*.js']
+                }
+            }
         },
         concurrent: {
             target: {
@@ -28,7 +43,7 @@ module.exports = function(grunt){
         connect: {
             server: {
                 options: {
-                    port: 8000,
+                    port: 8001,
                     hostname: 'localhost',
                     base: '',
                     keepalive: true
