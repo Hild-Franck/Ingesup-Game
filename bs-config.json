@@ -3,8 +3,8 @@
 	"server": {
 		"baseDir": "public",
 		"routes": {
-        "/bower_components": "bower_components",
-        "/dist": "dist"
+        	"/bower_components": "bower_components",
+        	"/dist": "dist"
+        }
     }
-	}
 }
