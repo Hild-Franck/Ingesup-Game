@@ -1,6 +1,7 @@
 const gameUpdate = require('./update')
 const world = require('../worldConfig')
 const initZoom = require('../zoom/initZoom')
+const initKeys = require('../initKeys')
 
 let moving = 0
 let zoomRatio = 1
@@ -11,7 +12,6 @@ const toggle = () => moving = (moving === 0)
 
 const gameCreate = game => {
 	const stageGroup = game.add.group()
-	const zooming = initZoom(game, world)
 	const map = game.add.tilemap('tilemap')
 	map.addTilesetImage('world')
 
@@ -19,13 +19,9 @@ const gameCreate = game => {
     layer.resize(2000, 2000)
     stageGroup.add(layer)
 
-    const cursors = game.input.keyboard.createCursorKeys()
+    let { zoomRatio, keys } = initKeys(game)
 
-    game.input.onDown.add(toggle, this)
-    game.input.mouse.mouseWheelCallback = event =>
-    	zoomRatio = zooming(event)
-
-    game.state.update = () => gameUpdate({ cursors, moving, zoomRatio, stageGroup, layer })(game)
+    game.state.update = () => gameUpdate({ keys, moving, zoomRatio, stageGroup, layer })(game)
 }
 
 module.exports = gameCreate
