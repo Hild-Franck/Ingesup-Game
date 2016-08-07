@@ -3,12 +3,7 @@ const world = require('../worldConfig')
 const initZoom = require('../zoom/initZoom')
 const initKeys = require('../initKeys')
 
-let moving = 0
 let zoomRatio = 1
-
-const toggle = () => moving = (moving === 0)
-	? moving = 1
-	: moving = 0
 
 const gameCreate = game => {
 	const stageGroup = game.add.group()
@@ -21,7 +16,8 @@ const gameCreate = game => {
 
     let { zoomRatio, keys } = initKeys(game)
 
-    game.state.update = () => gameUpdate({ keys, moving, zoomRatio, stageGroup, layer })(game)
+    game.state.update = () =>
+    	gameUpdate({ keys, zoomRatio, stageGroup, layer })(game)
 }
 
 module.exports = gameCreate
