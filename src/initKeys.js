@@ -9,10 +9,10 @@ const initKeys = (game, player) => {
 
 	const keyboard = game.input.keyboard
 	const playerKeys = keyboard.addKeys({
-		'up': Phaser.KeyCode.z,
-		'down': Phaser.KeyCode.s,
-		'right': Phaser.KeyCode.d,
-		'left': Phaser.KeyCode.q
+		'up': Phaser.KeyCode.Z,
+		'down': Phaser.KeyCode.S,
+		'right': Phaser.KeyCode.D,
+		'left': Phaser.KeyCode.Q
 	})
 	const cursors = keyboard.createCursorKeys()
 
