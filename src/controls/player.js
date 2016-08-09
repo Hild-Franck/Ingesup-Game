@@ -7,10 +7,10 @@ const playerControl = (game, keys, player) => {
 	const playerSpeed = player.speed
 	const playerKeys = keys.playerKeys
 
-	if (playerKeys.up.isDown) speed.x -= playerSpeed
-	if (playerKeys.down.isDown) speed.x += playerSpeed
-	if (playerKeys.right.isDown) speed.y += playerSpeed
-	if (playerKeys.left.isDown) speed.y -= playerSpeed
+	if (playerKeys.up.isDown) speed.y -= playerSpeed
+	if (playerKeys.down.isDown) speed.y += playerSpeed
+	if (playerKeys.right.isDown) speed.x += playerSpeed
+	if (playerKeys.left.isDown) speed.x -= playerSpeed
 
 	player.move(vectorize(speed))
 }
