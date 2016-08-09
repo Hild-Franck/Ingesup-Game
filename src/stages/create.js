@@ -14,9 +14,9 @@ const gameCreate = game => {
 	const layer = map.createLayer('layer')
     layer.resize(2000, 2000)
     stageGroup.add(layer)
-
-    const player = initPlayer(game.add.sprite(0, 0, 'character'))
-    console.log(player)
+    const playerSprite = game.add.sprite(0, 0, 'character')
+    stageGroup.add(playerSprite)
+    const player = initPlayer(playerSprite)
 
     let { zoomRatio, keys } = initKeys(game)
 
