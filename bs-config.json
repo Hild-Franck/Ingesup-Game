@@ -1,5 +1,10 @@
 {
 	"port": 8000,
-	"files": ["./dist/**/*.{html,css,js}"],
-	"server": {"baseDir": "./public"}
+	"server": {
+		"baseDir": "public",
+		"routes": {
+        	"/bower_components": "bower_components",
+        	"/dist": "dist"
+        }
+    }
 }
