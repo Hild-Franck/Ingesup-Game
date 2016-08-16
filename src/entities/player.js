@@ -14,8 +14,8 @@ const initPlayer = sprite => {
 			player.y += y
 			player.dir = toDirection(player.dir, x, y)
 			player.sprite.angle = player.dir
-			player.sprite.body.velocity.x += x * 30
-			player.sprite.body.velocity.y += y * 30
+			player.sprite.body.velocity.x += x * 50
+			player.sprite.body.velocity.y += y * 50
 		}
 	}
 	return player

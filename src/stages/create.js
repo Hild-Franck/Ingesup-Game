@@ -15,7 +15,7 @@ const gameCreate = game => {
 	const layer = map.createLayer('layer')
     layer.resize(2000, 2000)
 
-    map.setCollisionBetween(100, 140);
+    map.setCollisionBetween(109, 150);
 
     const playerSprite = game.add.sprite(0, 0, 'character')
     game.physics.enable(playerSprite)
@@ -27,7 +27,7 @@ const gameCreate = game => {
 
     playerSprite.body.bounce.set(0.2)
     playerSprite.body.tilePadding.set(32)
-    
+
     game.world.bringToTop(stageGroup)
 
     game.state.update = () =>
